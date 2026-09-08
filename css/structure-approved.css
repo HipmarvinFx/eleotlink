@@ -261,3 +261,43 @@
     font-size: 12px;
   }
 }
+
+/* =========================================================
+   MOBILE STRUCTURE DIAGRAM - TARGETED SCALE CORRECTION
+   Preserves the approved SVG artwork and desktop presentation.
+   Gives the existing composition modest additional physical
+   width on narrow screens so its internal typography remains
+   readable without forcing a fixed 1000px canvas.
+   ========================================================= */
+
+@media (max-width: 767px) {
+  .approved-diagram {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
+    padding-bottom: 6px;
+  }
+
+  .approved-diagram svg {
+    display: block;
+    width: 118%;
+    max-width: none;
+    height: auto;
+    margin-left: -9%;
+    shape-rendering: geometricPrecision;
+    text-rendering: geometricPrecision;
+  }
+
+  .structure-visual {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: visible;
+  }
+}
+
+
