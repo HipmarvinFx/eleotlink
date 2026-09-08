@@ -1,5 +1,5 @@
 /* ============================================================
-   ELEOTLINK — GLOBAL STYLES
+   ELEOTLINK â€” GLOBAL STYLES
    Modern referral & networking platform
    ============================================================ */
 :root {
@@ -996,4 +996,170 @@ section.alt { background: var(--soft); }
   #site-header, .panel, .sticky-cta, footer { display: none; }
   body { font-size: 12pt; color: #000; }
   a { text-decoration: underline; color: #000; }
+}
+/* =========================================================
+   ELEOTLINK FINAL MOBILE PRESENTATION SYSTEM
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  main {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before,
+  .hero::after {
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    isolation: isolate;
+  }
+
+  .hero-content > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-visual {
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .section-header,
+  .contact-grid,
+  .contact-item,
+  .card,
+  .info-card,
+  .form-card {
+    position: relative;
+    z-index: 5;
+  }
+
+  .contact-grid {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contact-item {
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: visible;
+    background: var(--bg, #ffffff);
+    isolation: isolate;
+  }
+
+  .contact-item > div {
+    min-width: 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .contact-item h3 {
+    color: var(--text, #111827);
+  }
+
+  .contact-item p {
+    color: var(--muted, #4b5563);
+  }
+
+  .contact-item a {
+    color: var(--indigo, #4338ca);
+    display: inline-block;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    position: relative;
+    z-index: 3;
+  }
+
+  .contact-item h3,
+  .contact-item p {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .contact-icon,
+  .contact-icon svg {
+    flex-shrink: 0;
+    position: relative;
+    z-index: 3;
+  }
+
+  .contact-icon svg {
+    display: block;
+  }
+
+  .card,
+  .info-card,
+  .form-card {
+    isolation: isolate;
+  }
+
+  .sticky-cta {
+    z-index: 500;
+  }
+
+  .sticky-cta-spacer {
+    min-height: 72px;
+  }
+
+  footer {
+    position: relative;
+    z-index: 5;
+  }
+}
+
+@media (max-width: 520px) {
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .contact-item {
+    padding: 18px;
+    gap: 12px;
+  }
+
+  .contact-item h3 {
+    font-size: 15px;
+    line-height: 1.35;
+  }
+
+  .contact-item p,
+  .contact-item a {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+  }
+
+  .contact-icon svg {
+    width: 20px;
+    height: 20px;
+  }
 }
