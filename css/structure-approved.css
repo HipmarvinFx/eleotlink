@@ -1,7 +1,7 @@
-
-/* EleotLink â€” Approved referral journey visuals
+﻿
+/* EleotLink Ã¢â‚¬â€ Approved referral journey visuals
    Added to preserve the existing site's visual language while replacing
-   the old generic 1-9-90 tree with the approved Double X â†’ Tetra X journey. */
+   the old generic 1-9-90 tree with the approved Double X Ã¢â€ â€™ Tetra X journey. */
 
 .approved-journey {
   margin-top: 18px;
@@ -225,8 +225,9 @@
 
   .approved-diagram svg {
     display: block;
-    width: 100%;
-    max-width: 100%;
+    width: 1000px;
+    min-width: 1000px;
+    max-width: none;
     height: auto;
   }
 
