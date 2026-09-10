@@ -301,3 +301,52 @@
 }
 
 
+
+/* Reward journey renderings */
+.approved-earning-copy .earning-visual {
+  margin: -2px -2px 18px;
+  padding: 10px 8px 4px;
+  background: var(--soft);
+  border: 1px solid var(--line-light);
+  border-radius: var(--radius-lg);
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.approved-earning-copy .earning-visual svg {
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .approved-earning-copy .earning-visual {
+    margin: -2px -2px 16px;
+  }
+}
+
+
+/* Qualification diagram fills - fixes rects/text rendering as solid black */
+.earning-visual text.cap {
+  fill: var(--muted);
+}
+.qualification-visual rect.step {
+  fill: var(--soft);
+  stroke: var(--line);
+  stroke-width: 1;
+}
+.qualification-visual text.step-label {
+  fill: var(--ink);
+}
+.qualification-visual rect.step.done {
+  fill: rgba(16,185,129,.12);
+  stroke: rgba(16,185,129,.35);
+}
+.qualification-visual text.step-label.done {
+  fill: var(--emerald-dark);
+}
+.qualification-visual text.arrow {
+  fill: var(--muted-light);
+}

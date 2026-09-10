@@ -17,6 +17,27 @@
 <meta property="og:description" content="See the approved EleotLink referral journey from Double X to Tetra X.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://eleotlink.com/structure.html">
+<script>
+(function () {
+  function fixDiagramSvgs() {
+    var svgs = document.querySelectorAll('.approved-diagram svg');
+    var isMobile = window.matchMedia('(max-width: 767px)').matches;
+    svgs.forEach(function (svg) {
+      if (isMobile) {
+        svg.style.width = '100%';
+        svg.style.maxWidth = '100%';
+        svg.style.marginLeft = '0';
+      } else {
+        svg.style.width = '';
+        svg.style.maxWidth = '';
+        svg.style.marginLeft = '';
+      }
+    });
+  }
+  fixDiagramSvgs();
+  window.addEventListener('resize', fixDiagramSvgs);
+})();
+</script>
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
@@ -259,3 +280,4 @@ window.addEventListener('scroll',function(){if(!ticking){requestAnimationFrame(u
 </script>
 </body>
 </html>
+

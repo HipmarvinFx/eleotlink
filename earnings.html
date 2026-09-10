@@ -17,6 +17,19 @@
 <meta property="og:description" content="Understand potential reward conditions alongside the approved Double X → Tetra X structure.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://eleotlink.com/earnings.html">
+<script>
+(function () {
+  function fixEarningLabels() {
+    var isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var labels = document.querySelectorAll('.approved-earning-label strong');
+    labels.forEach(function (el) {
+      el.style.color = isDark ? '#4338CA' : '';
+    });
+  }
+  fixEarningLabels();
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fixEarningLabels);
+})();
+</script>
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
@@ -63,15 +76,70 @@
 <div class="approved-earning-map">
 <div class="approved-earning-row">
 <div class="approved-earning-label"><strong>Double X</strong><span>First stage · 2 × 2 referral structure</span></div>
-<div class="approved-earning-copy"><h3>First-stage completion</h3><p>Completing the Double X structure establishes the first approved stage of the referral journey. If the official programme rules attach any reward, eligibility is determined by those rules—not by the illustration itself.</p></div>
+<div class="approved-earning-copy"><div class="earning-visual" aria-label="Double X structure illustration">
+  <svg viewBox="0 0 380 172" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Double X: you refer two partners">
+  <defs>
+    <linearGradient id="dxMiniNode" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4338CA"/>
+      <stop offset="1" stop-color="#312E81"/>
+    </linearGradient>
+  </defs>
+  <line x1="190" y1="60" x2="112" y2="96" stroke="#4F46E5" stroke-width="2"/>
+  <line x1="190" y1="60" x2="268" y2="96" stroke="#4F46E5" stroke-width="2"/>
+  <circle cx="190" cy="36" r="26" fill="url(#dxMiniNode)"/>
+  <text x="190" y="41" text-anchor="middle" fill="#fff" font-size="13" font-weight="700" font-family="Inter, sans-serif">YOU</text>
+  <circle cx="112" cy="120" r="28" fill="url(#dxMiniNode)"/>
+  <text x="112" y="125" text-anchor="middle" fill="#fff" font-size="14" font-weight="700" font-family="Inter, sans-serif">P1</text>
+  <circle cx="268" cy="120" r="28" fill="url(#dxMiniNode)"/>
+  <text x="268" y="125" text-anchor="middle" fill="#fff" font-size="14" font-weight="700" font-family="Inter, sans-serif">P2</text>
+  <text class="cap" x="190" y="164" text-anchor="middle" font-size="13" font-family="Inter, sans-serif">You refer 2 partners, each opens 2 more</text>
+</svg>
+</div>
+<h3>First-stage completion</h3><p>Completing the Double X structure establishes the first approved stage of the referral journey. If the official programme rules attach any reward, eligibility is determined by those rules—not by the illustration itself.</p></div>
 </div>
 <div class="approved-earning-row">
 <div class="approved-earning-label"><strong>Tetra X</strong><span>Main stage · 1 × 4 expansion</span></div>
-<div class="approved-earning-copy"><h3>Main-stage progression</h3><p>The Tetra X stage expands the direct layer to four positions and shows four positions under each partner. Any reward eligibility associated with progression is subject to the applicable qualification, activity and placement rules.</p></div>
+<div class="approved-earning-copy"><div class="earning-visual" aria-label="Tetra X structure illustration">
+  <svg viewBox="0 0 380 172" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tetra X: you have four direct positions">
+  <defs>
+    <linearGradient id="txMiniNode" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4F46E5"/>
+      <stop offset="1" stop-color="#312E81"/>
+    </linearGradient>
+  </defs>
+  <line x1="190" y1="60" x2="70" y2="98" stroke="#6366F1" stroke-width="1.6"/>
+  <line x1="190" y1="60" x2="157" y2="98" stroke="#6366F1" stroke-width="1.6"/>
+  <line x1="190" y1="60" x2="223" y2="98" stroke="#6366F1" stroke-width="1.6"/>
+  <line x1="190" y1="60" x2="310" y2="98" stroke="#6366F1" stroke-width="1.6"/>
+  <circle cx="190" cy="36" r="24" fill="url(#txMiniNode)"/>
+  <text x="190" y="41" text-anchor="middle" fill="#fff" font-size="13" font-weight="700" font-family="Inter, sans-serif">YOU</text>
+  <circle cx="70" cy="118" r="20" fill="url(#txMiniNode)"/>
+  <circle cx="157" cy="118" r="20" fill="url(#txMiniNode)"/>
+  <circle cx="223" cy="118" r="20" fill="url(#txMiniNode)"/>
+  <circle cx="310" cy="118" r="20" fill="url(#txMiniNode)"/>
+  <text class="cap" x="190" y="164" text-anchor="middle" font-size="13" font-family="Inter, sans-serif">Four direct positions, each with four more</text>
+</svg>
+</div>
+<h3>Main-stage progression</h3><p>The Tetra X stage expands the direct layer to four positions and shows four positions under each partner. Any reward eligibility associated with progression is subject to the applicable qualification, activity and placement rules.</p></div>
 </div>
 <div class="approved-earning-row">
 <div class="approved-earning-label"><strong>Qualified activity</strong><span>Participation and network conditions</span></div>
-<div class="approved-earning-copy"><h3>Qualification matters</h3><p>Structure alone is not a payout trigger. Where rewards exist, eligibility may depend on activation, qualified referrals, completed positions, active status, timing and other programme conditions.</p></div>
+<div class="approved-earning-copy"><div class="earning-visual qualification-visual" aria-label="Qualification and eligibility flow">
+  <svg viewBox="0 0 380 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Qualification flow: activation, referrals, placement, eligible">
+  <rect class="step" x="6" y="16" width="80" height="46" rx="10"/>
+  <text class="step-label" x="46" y="44" text-anchor="middle" font-size="12" font-weight="700" font-family="Inter, sans-serif">Activation</text>
+  <text class="arrow" x="96" y="44" text-anchor="middle" font-size="16" font-family="Inter, sans-serif">&#8250;</text>
+  <rect class="step" x="102" y="16" width="80" height="46" rx="10"/>
+  <text class="step-label" x="142" y="44" text-anchor="middle" font-size="12" font-weight="700" font-family="Inter, sans-serif">Referrals</text>
+  <text class="arrow" x="192" y="44" text-anchor="middle" font-size="16" font-family="Inter, sans-serif">&#8250;</text>
+  <rect class="step" x="198" y="16" width="80" height="46" rx="10"/>
+  <text class="step-label" x="238" y="44" text-anchor="middle" font-size="12" font-weight="700" font-family="Inter, sans-serif">Placement</text>
+  <text class="arrow" x="288" y="44" text-anchor="middle" font-size="16" font-family="Inter, sans-serif">&#8250;</text>
+  <rect class="step done" x="294" y="16" width="80" height="46" rx="10"/>
+  <text class="step-label done" x="334" y="44" text-anchor="middle" font-size="12" font-weight="700" font-family="Inter, sans-serif">Eligible</text>
+</svg>
+</div>
+<h3>Qualification matters</h3><p>Structure alone is not a payout trigger. Where rewards exist, eligibility may depend on activation, qualified referrals, completed positions, active status, timing and other programme conditions.</p></div>
 </div>
 </div>
 
@@ -151,3 +219,4 @@ window.addEventListener('scroll',function(){if(!ticking){requestAnimationFrame(u
 </script>
 </body>
 </html>
+

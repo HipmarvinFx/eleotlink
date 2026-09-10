@@ -2,3 +2,12 @@
 Thumbs.db
 *.log
 .vscode/
+
+# Local backup snapshots (kept outside the repo, see ../eleotlink-local-backups)
+*.before-*
+*.backup-*
+*.mobile-backup-*
+_backup-*
+_backup-*/
+backup-before-*/
+backup-before-*
